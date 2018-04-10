@@ -275,25 +275,20 @@ document.addEventListener("DOMContentLoaded", function () {
                         newCategory.classList.add("categ-list");
                         //categList.append(newCategory);
                         //inputCategory.value="";
-
-
                         categList.insertBefore(newCategory,categList.firstChild);
-
                         parent.removeChild(element);
                     }
-
-
-
-
-
                 }
             );
-
-
             var cancel = document.querySelector("#cancel");
 
             cancel.addEventListener('click', function () {
-                parent.removeChild(element);
+                var x = document.createElement("INPUT");
+                x.setAttribute("type", "search");
+                parent.appendChild(x);
+
+
+                //parent.removeChild(element);
             });
         }
 
